@@ -1,0 +1,23 @@
+{
+    "name": "battlelines",
+    "type": "standard",
+    "suits": [
+        "yellow",
+        "blue",
+        "red",
+        "green",
+        "purple"
+    ],
+    "values": [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "seven",
+        "eight",
+        "nine",
+        "ten"
+    ]
+}
