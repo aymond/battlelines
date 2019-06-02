@@ -12,20 +12,20 @@ func main() {
 	// gameDeck is the set of unused shuffled cards.
 	// discardDeck are cards removed from the game.
 	// playerOneDeck and playerTwoDeck are the player hands.
-	gameDeck, _ := (gocards.NewDeck("BattleLines"))
-	tacticsDeck, _ := (gocards.NewDeck("Tactics"))
+	gameDeck, _ := gocards.NewDeck("BattleLines")
+	tacticsDeck, _ := gocards.NewDeck("Tactics")
 	discardDeck, _ := gocards.NewDeck("Discard")
 	playerOneDeck, _ := gocards.NewDeck("PlayerOne")
 	playerTwoDeck, _ := gocards.NewDeck("PlayerTwo")
 	fmt.Println(gameDeck, tacticsDeck, playerOneDeck, playerTwoDeck, discardDeck)
 
-	// Load the two decks.
-	gameDeck.Initialize("data/battlelines.json")
-	tacticsDeck.Initialize("data/tactics.json")
+	// Load the contents of the two game decks.
+	// We are passing in S if Standard Deck json struture.
+	// We are passing in f if Fixed Decj json structure.
+	gameDeck.Initialize("data/battlelines.json", "s") // Standard Deck
+	tacticsDeck.Initialize("data/tactics.json", "f")  // Fixed Deck
 
-	// One for the Players, one for Tactics Cards
-	// And initialise a Discard deck.
-
+	fmt.Println(gameDeck, tacticsDeck)
 }
 
 func loadDeck() {
