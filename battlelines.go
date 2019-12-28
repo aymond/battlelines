@@ -25,7 +25,8 @@ func main() {
 	gameDeck.Initialize("data/battlelines.json", "s") // Standard Deck
 	tacticsDeck.Initialize("data/tactics.json", "f")  // Fixed Deck
 
-	fmt.Println(gameDeck, tacticsDeck)
+	fmt.Println(gameDeck)
+	fmt.Println(tacticsDeck)
 }
 
 func loadDeck() {
